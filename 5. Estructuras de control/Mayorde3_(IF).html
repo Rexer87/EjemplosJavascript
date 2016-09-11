@@ -1,0 +1,54 @@
+<HTML>
+<HEAD><TITLE>mayorde3</TITLE></HEAD>
+<BODY>
+<FORM name="miform">
+A:<INPUT TYPE="TEXT" name="txt_a" SIZE=2 MAXLENGTH=2><br>
+B:<INPUT TYPE="TEXT" name="txt_b" SIZE=2 MAXLENGTH=2><br>
+C:<INPUT TYPE="TEXT" name="txt_c" SIZE=2 MAXLENGTH=2><br>
+<INPUT TYPE="BUTTON" VALUE="Calcular el mayor" onclick="calcular()">
+</FORM>
+<script type="text/javascript">
+function calcular(){
+var a=parseInt(miform.txt_a.value);
+var b=parseInt(miform.txt_b.value);
+var c=parseInt(miform.txt_c.value);
+if(a==b && a>c){
+alert('A y B son los mayores: '+b);return;}
+
+if(a==c && a>b){
+alert('A y C son los mayores: '+a);return;}
+
+if(b==c && b>a){
+alert('B y C son los mayores: '+b);return;}
+
+if(a==b && b==c)
+alert(' A B y C son los iguales: '+a);
+if(a>b)
+{
+ if(a>c)
+  {
+   alert('EL mayor es A: '+a);
+  }
+   else //a>b pero a<c
+  {
+   alert('EL mayor es C: '+c);
+  }
+} //cierra if
+
+else //a<b
+{ 
+ if(b>c)
+ {
+  alert('EL mayor es B: '+b);
+ }
+ else
+ {
+  alert('El mayor es C: '+c);
+ }
+}//cierra else
+
+}//cierra calcular()
+</script>
+
+</BODY>
+</HTML>

@@ -1,0 +1,38 @@
+<HTML>
+<HEAD><TITLE>La instrucción Switch</TITLE></HEAD>
+<BODY>
+<script  type="text/javascript">
+//permite ejecutar uno de varios bloques de instrucciones en función del valor que tome una expresión
+//normalmente se utiliza para sustituir if anidados
+numero=parseInt(prompt("Dame un numero del 1 al 3",""));
+switch(numero)
+{
+case 1:
+document.write("Numero 1"); break;
+case 2:
+document.write("Numero 2"); break;
+case 3:
+document.write("Numero 3"); break;
+default:
+document.write("No era un numero del 1 al 3"); break;
+}
+ </script>
+
+ 
+ <script>
+numero=prompt("Dame un numero del 1 al 3","");
+switch(numero)
+{
+case '1':
+document.write("Numero 1"); break;
+case '2':
+document.write("Numero 2"); break;
+case '3':
+document.write("Numero 3"); break;
+default:
+document.write("No era un numero del 1 al 3"); break;
+}
+ </script>
+ 
+</BODY>
+</HTML>
