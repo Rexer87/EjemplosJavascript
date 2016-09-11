@@ -1,0 +1,29 @@
+<HTML>
+<HEAD><TITLE>Insertar JavaScript</TITLE>
+<script>
+alert('Ventana incrustada en la cabecera');
+</script>
+</HEAD>
+<BODY LINK=WHITE BGCOLOR=0066BB>
+<CENTER>
+<script>
+alert('Ventana incrustada en el BODY');
+</script>
+<!-- JavaScript en los eventos -->
+<form name='miform'>
+<input type='button' value="Mostrar una ventana" onclick="alert('Ventana asociada al evento OnCLick')">
+</form>
+<!-- JavaScript asociado a un enlace -->
+<br><br>
+<font face=tahoma size=+1>
+Para mostrar una ventana pulsa <a href="javascript:alert('has pulsado un enlace')" onmouseover="javascript:alert('has pasado por encima')">aquí</a>
+</font>
+<br><br>
+<!--JavaScript en un fichero externo .js -->
+<script language="javascript" type="text/javascript" src="f.js"></script>
+<form name='mform'>
+<input type='button' value="Mostrar una ventana" onclick="alert(retornarFecha())">
+</form>
+</CENTER>
+</BODY>
+</HTML>
