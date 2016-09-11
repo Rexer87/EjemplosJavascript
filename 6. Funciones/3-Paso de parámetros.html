@@ -1,0 +1,29 @@
+<HTML>
+<HEAD><TITLE>2-Paso de Parámetros</TITLE></HEAD>
+<BODY>
+
+<script  type="text/javascript">
+var color="Rojo"; //aunque tenga var será global al estar definida al comienzo del script
+cambiarcolor(color);
+alert(color);
+alert(colordelaFuncion); 
+//sólo se verá si en la función es declarada como global: colordelaFuncion="Verde" 
+//y no como local:  var colordelaFuncion="Verde"; 
+function cambiarcolor(col)
+{
+colordelaFuncion="Verde"; 
+alert("Voy a cambiar "+col+" por "+ colordelaFuncion);
+// si de verdad quiero cambiar el valor de la variable puedo hacerlo porque es global
+color="Naranja";
+}
+</script>
+
+<script>
+document.write(color+'<br>'); 
+//Escribe "Naranja" (color)
+
+document.write(colordelaFuncion); 
+//si colordelaFuncion fuera global (sin var) si que la escribiría  
+</script>
+</BODY>
+</HTML>

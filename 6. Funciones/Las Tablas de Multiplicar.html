@@ -1,0 +1,26 @@
+<html><head><title>Las Tablas de Multiplicar</title></head>
+<body>
+<script language="JavaScript" type="text/javascript">
+<!--
+  function Tabla(numero){
+    with (document)
+       {
+       write ('<table border=1>');
+       write ('<tr>');
+       for (i=1; i < 10; i ++)
+          write ('<td bgcolor="00aa99" width=18>'+numero*i+'</td>');
+       write ('</tr>');
+       write ('</table>');
+       } 
+   }
+   
+//-->
+//llamamos a la función 9 veces pasando el número de fila
+//
+for(j=1;j<=9;j++)
+  Tabla(j);
+</script>
+</body>
+
+
+</html>
