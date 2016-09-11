@@ -1,0 +1,31 @@
+<HTML>
+<HEAD><TITLE>Tipos de Datos y Variables</TITLE>
+</HEAD>
+<BODY>
+<!-- Para definir el lenguaje de scripts por defecto se puede añadir en la cabecera el siguiente META
+<META http-equiv="Content-Script-Type" content="text/javascript">
+-->
+<script type="text/javascript">
+var cadena1="\"Hola a todos\"";
+var a=2;
+var b=2.5;
+var c=02;
+var d=0xa;
+var f=4;
+f+=a;
+
+alert(f);
+var resp=true;
+
+document.write('<br>');
+document.write(resp);
+resp=false;
+document.write('<br>')
+document.write(resp);
+
+</script>
+<form name="miform">
+<input type="button" value="Ver Variables" onclick="alert('cadena1 '+ cadena1 + ' a='+a+' b='+b+' c='+c +' d='+d)">
+</form>
+</BODY>
+</HTML>

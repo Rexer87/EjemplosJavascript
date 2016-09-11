@@ -1,0 +1,67 @@
+<HTML>
+<HEAD><TITLE>3. Ambito de variables</TITLE>
+</HEAD>
+<BODY>
+<!-- Para definir una variable  como local utilizamos la palabra var -->
+
+<script type="text/javascript">
+/*las variables globales son accesibles desde cualquier script*/
+var variableGlobal='Soy Global';
+</script>
+
+<!-- Este códgo no se ejecuta al no haber sido declarada todavía la función
+<script>
+var otraGlobal='Soy otra Global';
+with(document)
+{
+write(mifuncion('otra'));
+}
+</script>
+-->
+
+
+<script>
+function mifuncion(tipo){
+
+	var variablelocal="Soy Local";
+
+	if (tipo=='local'){
+		return variableLocal;
+		exit;
+	}
+	
+	if (tipo=='global'){
+		return variableGlobal;
+		exit;
+	}
+
+	if (tipo=='otra'){
+		var otraGlobal='Soy otraaaaa Global';
+		return otraGlobal;
+		alert(variablelocal);
+		exit;
+	}
+	
+}
+
+
+with(document)
+{
+write(mifuncion('global'));
+
+}
+
+</script>
+
+
+<!-- Ahora si se ejecuta, ya ha sido leída la función-->
+<script>
+//var otraGlobal='Soy otra Global';
+with(document)
+{
+write(mifuncion('otra'));
+}
+</script>
+
+</BODY>
+</HTML>
