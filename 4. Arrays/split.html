@@ -1,0 +1,20 @@
+<html><head><title></title></head>
+<body>
+
+<script>
+//split(), crea un array a partir de una cadena de elemento separados 
+//separadorres posible: ("") char a char, (" ")espacios en blanco, (",")coma, etc
+document.write('<br>');
+var cadena="SMR.DAW.DAM.ASIR";
+var ciclos=cadena.split(".");
+for (j=0;j<ciclos.length;j++)
+document.write('ciclos['+j+']: '+ciclos[j]+'<br>');
+
+//podemos crear un nuevo array con el método join() de los arrays
+document.write('<br>');
+var otracadena=ciclos.join();  
+document.write(otracadena);
+
+</script>
+</BODY>
+</HTML>

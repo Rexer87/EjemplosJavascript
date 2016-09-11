@@ -1,0 +1,32 @@
+<html><head><title></title></head>
+<body>
+
+<script>
+
+var array1=new Array('SMR','DAW','DAM','ASIR');
+var array2=new Array();
+for (j=0;j<array1.length;j++)
+{
+ if(array1[j]!='DAW')
+  {
+     array2[j]=array1[j];
+  }
+	
+  else
+  {
+      borrable=j;
+  }
+
+}
+
+array2.splice(borrable, 1);
+
+for (i=0;i<array2.length;i++)
+{
+  document.write(array2[i]+'<br>');
+  
+}
+
+</script>
+</BODY>
+</HTML>

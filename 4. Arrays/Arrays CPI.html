@@ -1,0 +1,41 @@
+<HTML>
+<HEAD><TITLE>Arrays C, P e I</TITLE></HEAD>
+<BODY>
+<script type="text/javascript">
+var num;
+ArrayC = new Array;
+ArrayP = new Array;
+ArrayI = new Array;
+Array3 = new Array;
+var num;
+  
+num=prompt("Introduce un número","");
+document.write('<br>');
+//Array Completo
+document.write('El array completo: ');
+for (i=0;i<=num;i++)
+{
+ArrayC[i]=i;
+document.write(ArrayC[i]+', ');
+}
+document.write('<br>');
+document.write('Otra vez: '+ArrayC);
+//Array Par
+document.write('<br> Pares: <br>');
+for (i=0;i<num;i=i+2)
+{
+ArrayP[i]=i;
+document.write(ArrayP[i]+ '<br>');
+}
+document.write('<br>Impares:<br>');
+
+//Array Impar
+for (i=1;i<=num;i=i+2)
+{
+ArrayI[i]=i;
+document.write(ArrayI[i]+ '<br>');
+}
+
+</script>
+</BODY>
+</HTML>
