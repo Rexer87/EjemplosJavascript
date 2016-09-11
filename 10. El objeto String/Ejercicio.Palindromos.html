@@ -1,0 +1,39 @@
+<html>
+<head><title>Ejercicios String - Palindromos</title></head>
+<body>
+
+ 
+<script language='javascript'>
+function quita_blancos(victima) {
+  nuevo='';
+  for (i=0; i < victima.length; i++) {
+    if (victima.charAt(i) != ' ')
+      nuevo+=victima.charAt(i);
+  }
+  return nuevo;
+}
+function es_palin() {
+  str=document.f_palin.caja_palin.value.toLowerCase();  // todo a minusculas
+  str=quita_blancos(str);
+  tam=str.length;
+  centinela_es_palindromo=true;
+  for (i=0; i < str.length/2; i++) {
+    if (str.charAt(i) != str.charAt(tam-1-i)) {
+      centinela_es_palindromo=false;
+      break;
+    }
+  }
+  if (centinela_es_palindromo)
+    alert('SIIIIIIIIIIIIIIIii');
+  else
+    alert('NOOOOOOOOOOOOOOOOOoo es palindromo... :(((');
+}
+</script>
+<form name='f_palin'>
+  <input type='text' name='caja_palin'>
+  <input type='button' onclick='es_palin()' value='averigua!'>
+</form>
+
+
+</body>
+</html>

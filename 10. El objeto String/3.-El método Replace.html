@@ -1,0 +1,19 @@
+<html>
+<head><title>Expresiones Regulares. El método replace </title></head>
+<body>
+<font face=arial>
+<script type="text/javascript">
+var re=/[aá]/gi;
+//g : todas las entradas //i: ignora case //x: ignora los espacios en blanco //x: hace que el punto represente cualquier caracter (incluido el .) 
+var cadena1='No Por Mucho Madrugar Amanece Más Temprano';
+with(document){
+write('<b>Expresiones Regulares</b>. - EL método <b>replace(patrón, newstr) -</b>');
+write('<br><br>');
+write('Cadena: '+cadena1.italics());write('<br>');
+write('Sustituimos todas "a" por "?": ');write('<br>')
+write('<b>replace(patron,nuevopatrón)</b>: == '+cadena1.italics().replace(re,'?')+'<br>'+'<br>');
+}
+</script>
+</font>
+</body>
+</html>

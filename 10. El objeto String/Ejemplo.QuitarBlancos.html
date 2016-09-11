@@ -1,0 +1,37 @@
+<html>
+<head><title>htmleando.com</title></head>
+<body>
+<script type="text/javascript">
+function trim(S)
+{
+var A = S;
+var i;
+var P1 = 1;
+var P2 = A.length;
+for (i=1; i <= A.length; i++)
+{
+  if (A.charAt(i) != ' ')   {
+    P1 = i;
+    break;
+   }
+}
+ 
+for (i = A.length; i >= 1; i--){
+   if (A.charAt(i) != ' ')   {
+    P2 = i;
+    break;
+   }
+}
+ 
+A = A.substring(P1, P2);
+ 
+return A;
+}
+</script>
+<script>
+var cadenaconblancos="  Hola a Todos       ";
+var cadenasinblancos=trim(cadenaconblancos);
+document.write("-"+cadenasinblancos+"-");
+</script>
+</body>
+</html>

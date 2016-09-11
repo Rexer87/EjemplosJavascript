@@ -1,0 +1,25 @@
+<html>
+<head><title>El objeto String</title></head>
+<body>
+<script type="text/javascript">
+//estas dos declaraciones son equivalentes
+//todas las cadenas de texto son por defecto un objeto String
+var cadena_1 = "Hola a todos";
+var cadena_2 = new String ("Hola a todos");
+
+// Propiedad length - La única que tiene
+function lon(){
+document.miform.ncar.value=(miform.texto.value.length);
+//también
+//var cadena=miform.texto.value;
+//alert(cadena.length);
+}
+</script>
+<font size+=1 face="arial"><b>length</b> es la única propiedad de un objeto String </font>
+<form name="miform">
+Cadena: <input type="text" name="texto" onkeyup="lon()"><br>
+Numero de caracteres: <input type="text" size=4 name="ncar">
+<input type="reset" value="Limpiar">
+</form> 
+</body>
+</html>

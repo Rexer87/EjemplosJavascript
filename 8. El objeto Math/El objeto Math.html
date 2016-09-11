@@ -1,0 +1,64 @@
+<html>
+<head><title>El Objeto Math</title></head>
+
+<body>
+<center><font size+=1 face=arial> Algunas constantes</font></center>
+<script type="text/javascript">
+with(document)
+{
+write('Numero e: '+Math.E+'<br>');
+write('Numero PI: '+Math.PI+'<br>');
+write('Raíz de 0.5: '+Math.SQRT1_2+'<br>');
+write('Raíz de 2: '+Math.SQRT2+'<br>');
+}
+</script>
+<hr>
+
+<script type="text/javascript">
+function calcular(){
+with (document)
+	{
+	miform.raiz.value=Math.sqrt(parseFloat(miform.num.value));
+	miform.abso.value=Math.abs(parseFloat(miform.num.value));
+	miform.rond.value=Math.round(parseFloat(miform.num.value));
+	miform.flor.value=Math.floor(parseFloat(miform.num.value))
+	miform.may.value=Math.ceil(parseFloat(miform.num.value));
+	miform.tpow.value=Math.pow(parseFloat(miform.num.value),2); //al cuadrado pow(x,y)
+	}
+}
+</script>
+<center><font size+=1 face=arial> Algunos métodos del objeto Math</font></center>
+<form name="miform">
+Numero: <input type="text" size=6 maxlength=6 name="num"><br><br>
+Raíz cuadrada: <input type="text" size=4 maxlength=4 name="raiz"><br>
+Valor absoluto <input type="text" size=4 maxlength=4 name="abso"><br>
+Entero más cercano <input type="text" size=4 maxlength=4 name="rond"><br>
+Entero menor más cercano <input type="text" size=4 maxlength=4 name="flor"><br>
+Entero mayor más cercano <input type="text" size=4 maxlength=4 name="may"><br>
+<br>
+Al cuadrado <input type="text" size=4 maxlength=4 name="tpow"><br>
+
+
+<input type="button" value='Calcular' onclick="calcular()">
+
+
+<hr>
+<center><font size+=1 face=arial>El Objeto Number</font></center>
+<p> Se utiliza para validaciones relacionadas con el valor máximo y el mínimo de un número en Javascript
+<script type="text/javascript">
+with(document)
+{
+write('Menor número en Javascript: '+Number.MIN_VALUE+'<br>');
+write('Mayor número en Javascript: '+Number.MAX_VALUE+'<br>');
+write('NaN en Javascript: '+Number.NaN+'<br>');
+
+write(' to_Precision: '+Math.PI.toPrecision(3)+'<br>');
+write(' to_Fixed: '+Math.PI.toFixed(3)+'<br>');
+write(' to_Exponential: '+Math.PI.toExponential(5)+'<br>'); //puedo indicar el número de decimales
+
+}
+</script>
+<hr>
+
+</body>
+</html>

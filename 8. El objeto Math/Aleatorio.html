@@ -1,0 +1,35 @@
+<html>
+<head><title>Aleatorio</title></head>
+
+<body>
+<script type="text/javascript">
+function GenAl(){
+alert(Math.random());
+}
+
+function GenAl_0N(){
+var N=parseInt(prompt("Introduce un numero:"));
+alert(Math.round(Math.random()*N)); //round, el entero mas cercano
+}
+
+function GenAl_NM(){
+var N=parseInt(prompt("Introduce N:",""));
+var M=parseInt(prompt("Introduce M :(mayor a N)",""));
+// Rango 0.0 - 1.0 * N+(M-N)
+alert(Math.round(Math.random()*(M-N)+N));
+}
+</script>
+<center>Math.random() genera un aleatorio entre 0.0 y 1.0
+<form name="miform">
+<input type="button" value="Generar Aleatorio" onclick="GenAl()">
+<hr>
+<input type="button" value="Generar Aleatorio entre 0 y N" onclick="GenAl_0N()">
+
+<hr>
+<input type="button" value="Generar Aleatorio entre N y M" onclick="GenAl_NM()">
+</form>
+</center>
+
+
+</body>
+</html>

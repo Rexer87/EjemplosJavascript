@@ -1,0 +1,113 @@
+<html>
+<head><title>Algunos Ejemplos de Expresiones Regulares.</title></head>
+<body 
+<font face=arial>
+<script type="text/javascript">
+
+var cadena="Alemania";
+/*
+var re1=/a/; if(cadena.match(re1)) alert("Coincidencias: "+ cadena.match(re1).length+"..hay una a en Alemania");
+var re1=/a/g; if(cadena.match(re1)) alert("Coincidencias: "+ cadena.match(re1).length+"..hay dos a en Alemania");
+var re1=/a/gi; if(cadena.match(re1)) alert("Coincidencias: "+ cadena.match(re1).length+"..hay tres a en Alemania");
+var re1=/^A/; if(cadena.match(re1)) alert("Coincidencias: "+ cadena.match(re1).length+"..Alemania comienza por A");
+var re1=/a$/; if(cadena.match(re1)) alert("Coincidencias: "+ cadena.match(re1).length+"..Alemania termina por a");
+var re1=/[abcde]/g; if(cadena.match(re1)) alert("Coincidencias: "+ cadena.match(re1).length+"..hay una a b c d ó e");
+var re1=/[^0-9]/g; if(cadena.match(re1)) alert("Coincidencias: "+ cadena.match(re1).length+"..no hay números en Alemania");  // 8 coincidencias 
+var re1=/(m|i)a/g; if(cadena.match(re1)) alert("Coincidencias: "+ cadena.match(re1).length+"..(m|i)a ma y ia");  // 2 coincidencias 
+
+
+if(re1=/\s/g.test("ae iou")) alert("espacio  en blanco"); // con .test podemos hacer comprobaciones rápidas
+
+var cadena="aa1122a";
+var re1=/a{3}/g; if(cadena.match(re1)) alert("Coincidencias: "+ cadena.match(re1).length+"..hay tres a ");  // con {2} sí, con {3} no.
+var re1=/a{2,}/g; if(cadena.match(re1)) alert("Coincidencias: "+ cadena.match(re1).length+"..hay dos o más a ");  // con {2} sí, con {3} no.
+
+*/
+
+
+function com_a(){
+var re=/^a/i;
+if(!document.miform.texto.value.match(re))
+alert("NO");else alert("SI");
+}
+
+function ter_a(){
+var re=/a$/i;
+if(!document.miform.texto.value.match(re))
+alert("NO");else alert("SI");
+}
+
+function comter_a(){
+var re=/^a\w*a$/i;
+if(!document.miform.texto.value.match(re))
+alert("NO");else alert("SI");
+}
+
+
+function dig(){
+var re=/[0-9]/;
+if(!document.miform.texto.value.match(re))
+alert("NO");else alert("SI");
+}
+
+function matricula(){
+var re=/^[0-9]{4}[A-Z]{3}$/;
+// Métodos abreviados
+//* {0,} Cero o más veces
+//+ {1,} Uno o más veces
+//? {0,1} Cero o ninguna
+
+if(!document.miform.texto.value.match(re))
+alert("NO");else alert("SI");
+}
+function cerouno(){
+var re=/.[0-1]$/;
+if(!document.miform.texto.value.match(re))
+alert("NO");else alert("SI");
+}
+function dni(){
+var re=/^[0-9]{8}[a-zA-Z]{1}$/;
+if(!document.miform.texto.value.match(re))
+alert("NO");else alert("SI");
+}
+
+function fecha(){
+var re=/^\d{2}\/\d{2}\/\d{4}$/;
+if(!document.miform.texto.value.match(re))
+alert("NO");else alert("SI");
+}
+
+/*
+function email(){
+var re=/^[a-zA-Z]{3,}@[a-zA-Z]{3,}\.[a-zA-Z]{2,3}$/;
+if(!document.miform.texto.value.match(re))
+alert("NO");else alert("SI");
+}
+*/
+
+function email(){
+var re=/^\w{3,}@\w{3,}\.\w{2,3}$/;
+if(!document.miform.texto.value.match(re))
+alert("NO");else alert("SI");
+}
+
+
+
+</script>
+<form name='miform'>
+<input type='text' name='texto' value='Escribe un texto'><br>
+<input type='button' value='¿Comienza por a?' onclick='com_a()'><br>
+<input type='button' value='¿Termina con a?' onclick='ter_a()'><br>
+
+<input type='button' value='¿Comienza y Termina con a?' onclick='comter_a()'><br>
+<input type='button' value='¿Hay algún dÍgito?' onclick='dig()'><br>
+<input type='button' value='¿es una matrícula?' onclick='matricula()'><br>
+<input type='button' value='¿termina en 0 ó 1?' onclick='cerouno()'><br>
+<input type='button' value='¿es un dni?' onclick='dni()'><br>
+<input type='button' value='¿es una fecha tipo dd/mm/yyy?' onclick='fecha()'><br>
+<input type='button' value='¿es una email?' onclick='email()'><br>
+
+</form>
+</font>
+</body>
+</html>

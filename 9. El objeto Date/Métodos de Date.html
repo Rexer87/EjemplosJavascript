@@ -1,0 +1,40 @@
+<html>
+<head><title>Métodos de Date</title></head>
+<body>
+<script type="text/javascript">
+var fecha = new Date(); //se genera la fecha cada vez que se invoca la función
+with(document)
+{
+write('<br>');
+write('getDate() - Día del mes (entero entre 1 y 31): '+fecha.getDate()+'<br>');
+write('getDay - Día de la semana (entero de 0.domingo a 6.sábado): '+fecha.getDay()+'<br>');
+write('getHours - Hora (entero 0-23): '+fecha.getHours()+'<br>');
+write('getMinutes - Minutos (entero 0-59): '+fecha.getMinutes()+'<br>');
+write('getSeconds - Segundos entero 0-59): '+fecha.getSeconds()+'<br>');
+write('getMonth - Mes del año (0.enero-11.diciembre): '+fecha.getMonth()+'<br>');
+write('getYear - Año (como entero): '+fecha.getYear()+'<br>');
+write('getFullYear - Año (como entero): '+fecha.getFullYear()+'<br>');
+write('getTime - Segundos desde 1 de enero de 1970: '+fecha.getTime()+'<br>');
+
+}
+
+function CreFe(){
+var fecha2 = new Date();
+fecha2.setDate(document.miform.dia.value);
+fecha2.setMonth(document.miform.mes.value);
+fecha2.setYear(document.miform.ayo.value);
+
+alert(fecha2.getDate()+' del ' + fecha2.getMonth()+' de '+fecha2.getYear());
+}
+</script>
+
+<center>
+<hr> <a href="javascript:CreFe()"> Crear fecha </a>
+<form name="miform">
+Dia<input size=2 type="text" name="dia"><br>
+Mes<input size=2 type="text" name="mes"><br>
+Año<input size=2 type="text" name="ayo"><br>
+</form>
+</center>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+<head><title>El método match para Expresiones Regulares.</title></head>
+<body 
+<font face=arial>
+<script type="text/javascript">
+var i=0;
+var cadena="paso taso caso vaso";
+var re=/o/g;
+var MiArray= new Array();
+
+MiArray=cadena.match(re);
+document.write("Existen: "+MiArray.length+" coincidencias <br>" );
+for (i=0; i<MiArray.length; i++)
+{
+document.write(MiArray[i]+'<br>');
+}
+
+var cadena2=cadena.replace(re,"a");
+document.write(cadena2);
+
+</script>
+
+
+</font>
+</body>
+</html>

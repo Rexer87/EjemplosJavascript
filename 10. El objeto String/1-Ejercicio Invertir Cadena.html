@@ -1,0 +1,25 @@
+<html>
+<head><title>Ejercicios String - Invertir </title></head>
+<body>
+
+<script type="text/javascript">
+function invertir(){
+var cad2='';
+lon=document.miform.cadena.value.length;
+for(i=lon-1;i>=0;i--)
+{
+cad2=cad2+document.miform.cadena.value.charAt(i);
+}
+document.miform.cad_inv.value=cad2;
+}
+</script>
+<center> Ejercicios: Invertir una cadena. 
+<form name='miform'>
+cadena: <input type='text' size=23 name='cadena'> <br>
+Cadena Invertida <input type='text' size=23 name='cad_inv'><br><br>
+
+<input type='button' value='Invertir' onclick="invertir()">
+</form>
+</center>
+</body>
+</html>
